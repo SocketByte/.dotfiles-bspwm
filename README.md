@@ -1,5 +1,7 @@
 # .dotfiles for bspwm + picom
 
+![Preview](preview.jpg)
+
 ## Features
 
 - Bspwm/sxhkd
