@@ -1,0 +1,22 @@
+background_opacity: 0.8
+
+window:
+  padding:
+    x: 16
+    y: 16
+
+live_config_reload: true
+
+font:
+  normal:
+    family: "Iosevka Extended"
+    style: Regular
+  size: 10
+
+colors:
+  primary:
+    foreground: "#ffffff"
+    background: "#000000"
+
+  normal:
+    white: "#ffffff"
