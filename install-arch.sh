@@ -10,14 +10,12 @@ if [[ $EUID -eq 0 ]]; then
     exit 1
 fi
 
-$PACKAGES = (
-    "git" "alacritty" "bspwm" "sddm" "xorg" "xorg-xinit"
-    "cava" "micro" "sxhkd" "zsh" "firefox" "stow" "base-devel"
+PACKAGES=("git" "alacritty" "bspwm" "sddm" "xorg" "xorg-xinit"
+    "micro" "sxhkd" "zsh" "firefox" "stow" "base-devel"
     "networkmanager" "bluez" "bluez-utils" "alsa-utils" "pipewire"
     "pipewire-pulse" "ttf-font-awesome" "bat" "bpytop" "telegram-desktop"
-    "discord" "fasd" "xclip" "flameshot" "gnome-keyring" "jq" "ulauncher"
-    "feh" "neofetch" "npm" "nodejs" "ttf-roboto" "ttf-liberation" "unzip" "zip"
-)
+    "discord" "fasd" "xclip" "flameshot" "gnome-keyring" "jq"
+    "feh" "neofetch" "npm" "nodejs" "ttf-roboto" "ttf-liberation" "unzip" "zip")
 # Install packages using pacman
 for PACKAGE in "${PACKAGES[@]}"; do
     printf "\nInstalling $PACKAGE...\n"
@@ -30,7 +28,7 @@ makepkg -si
 cd ..
 rm -rf yay
 
-yay -S --noconfirm ttf-iosevka ttf-meslo visual-studio-code-bin polybar picom-ibhagwan-git
+yay -S --noconfirm ulauncher cava ttf-iosevka ttf-meslo visual-studio-code-bin polybar picom-ibhagwan-git
 
 chsh -s /bin/zsh
 
